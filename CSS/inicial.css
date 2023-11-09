@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans:opsz,wght@6..12,300&family=Roboto:wght@300&display=swap');
+
+:root {
+    --cor-fundo: #ffc0cb;
+    --cor-barradenavegacao: rgb(0, 0, 0);
+    --cor-texto: #fff;
+    --fonte-barra: 'Lora', serif;
+    --fonte-titulo: 'Nunito Sans', sans-serif;
+    --fonte-paragrafo: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+nav {
+    background-color: var(--cor-barradenavegacao);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+}
+
+#promocao {
+    font-family: var(--fonte-barra);
+    color: var(--cor-texto);
+    text-align: center;
+    font-size: 30px;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#container_card {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem à largura do dispositivo */
+    justify-content: space-evenly;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: var(--cor-barradenavegacao);
+    color: var(--cor-texto);
+}
+
+/* Adicionando uma regra de mídia para dispositivos com largura máxima de 768 pixels (pode ajustar conforme necessário) */
+@media only screen and (max-width: 768px) {
+    #container_card {
+        flex-direction: column; /* Muda para empilhar os elementos verticalmente em dispositivos menores */
+        align-items: center; /* Centraliza os elementos */
+    }
+}
